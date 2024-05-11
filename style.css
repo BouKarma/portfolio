@@ -418,7 +418,7 @@
 .resume-percentages .block{
     display: block;
     width: 280px;
-    margin: 40px 20px 10px 0px;
+    margin: 40px 15px 10px 5px;
 }
 .skill{
     margin-top: 10px;
@@ -459,6 +459,9 @@
     border-radius: 15px;
     background: #f31d93;
 }
+.knowledges.block{
+    margin-left: 5px;
+}
 .knowledges-content{
     display: flex;
     flex-wrap: wrap;
@@ -467,7 +470,7 @@
     font-size: 14px;
     padding: 10px;
     border-radius: 10px;
-    margin: 5px 5px 5px 0;
+    margin: 5px 5px 5px 0px;
     background: #f2f2f2;
 }
 /* Works Section */
@@ -488,7 +491,7 @@
     margin-top: 25px;
     margin-left: 25px;
     height: 3px;
-    width: 107px;
+    width: 129px;
     opacity: 0.8;
     border-radius: 5px;
     background: #225a92;
@@ -511,7 +514,7 @@
     margin-top: 25px;
     margin-left: 25px;
     height: 3px;
-    width: 107px;
+    width: 149px;
     opacity: 0.8;
     border-radius: 5px;
     background: #225a92;
@@ -534,12 +537,17 @@
     margin-top: 25px;
     margin-left: 25px;
     height: 3px;
-    width: 107px;
+    width: 113px;
     opacity: 0.8;
     border-radius: 5px;
     background: #225a92;
 }
 /* Responsive */
+@media(max-width: 1920px){
+    .container .content{
+        margin: 0 -300px 0 -300px;
+    }
+}
 @media(max-width: 1650px){
     .container .content{
         margin: 0 -150px 0 -150px;
@@ -560,6 +568,12 @@
         width: 650px;
         margin: 0 auto 0 auto;
     }
+    .block .block-content{
+        width: 320px;
+    }
+    .resume-percentages .block{
+        width: 280px;
+    }
 }
 @media(max-width: 1050px){
     .container .content{
@@ -571,6 +585,15 @@
         width: 350px;
         margin: 10px 10px 10px 0;
     }
+    .knowledges.block{
+        margin-left: 0px;
+    }
+    .education.block{
+        margin-right: 40px;
+    }
+    .working-skills.block{
+        margin-right: 105px;
+    }
 }
 @media(max-width: 935px){
     .what-i-do .what-block{
@@ -580,6 +603,11 @@
 @media(max-width: 711px){
     .what-i-do .what-block{
         width: 100%;
+    }
+}
+@media(max-width: 500px){
+    .education.block{
+        width: 80%;
     }
 }
 /* === Sidebar === */
