@@ -334,21 +334,22 @@
                 <div class="contact-section">
                     <div class="contact-title">Contact</div>
                     <div class="contact-blocks">
-                        <form class="contact-form">
+                        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                            <input type="hidden" name="access_key" value="65d32e51-fe25-460a-857d-185d764b9a23">
                             <div class="contact-form-title">
                                 <span>You can message me if you want to discuss about a programming job.</span>
                             </div>
                             <div class="contact-form-name">
                                 <label class="input-label name">Name *</label>
-                                <input type="text" class="input-box name">
+                                <input type="text" required name="name" class="input-box name">
                             </div>
                             <div class="contact-form-email">
                                 <label class="input-label email">Email *</label>
-                                <input type="email" class="input-box email">
+                                <input type="email" required name="email" class="input-box email">
                             </div>
                             <div class="contact-form-text">
                                 <label class="input-label message">Message *</label>
-                                <textarea name="message" class="input-box message"></textarea>
+                                <textarea name="message" required class="input-box message"></textarea>
                             </div>
                             <div class="contact-form-btn">
                                 <button type="submit">Send Message</button>
