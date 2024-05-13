@@ -13,7 +13,7 @@
     <div class="container">
         <div class="profile">
             <div class="image">
-                <img src="images/profile-picture.jpg" alt="profile-image">
+                <img src="images/about/profile-picture.jpg" alt="profile-image">
             </div>
             <div class="text-data">
                 <div class="name">Ryan Silva</div>
@@ -61,9 +61,11 @@
                     <span>Download Cv</span>
                 </button>
             </div>
+            <div class="">*I'm still working on this portfolio.</div>
         </div>
+
         <div class="content">
-            <div class="about text" id="about-content">
+            <div class="about text active" id="about-content">
                 <div class="about-section">
                     <div class="about-title">About</div>
                     <div class="about-me">
@@ -102,7 +104,8 @@
                     </div>
                 </div>
             </div>
-            <div class="resume text active" id="resume-content">
+
+            <div class="resume text" id="resume-content">
                 <div class="resume-section">
                     <div class="resume-title">Resume</div>
                     <div class="resume-blocks">
@@ -226,34 +229,139 @@
                 </div>
                 
             </div>
+
             <div class="works text" id="works-content">
                 <div class="works-section">
-                    <div class="works-title">Works</div>
+                    <div class="works-title">Portfolio</div>
                     <div class="works-blocks">
-                        
+                        <div class="works-categorys">
+                            <input type="radio" name="category" checked id="all-radio">
+                            <input type="radio" name="category" id="mockup-radio">
+                            <input type="radio" name="category" id="graphic-design-radio">
+                            <input type="radio" name="category" id="logo-radio">
+                            <div class="works-list">
+                                <label for="all-radio" class="category checked" id="all"><span>All</span></label>
+                                <label for="mockup-radio" class="category" id="mockup"><span>Mockup</span></label>
+                                <label for="graphic-design-radio" class="category" id="graphic-design"><span>Graphic Design</span></label>
+                                <label for="logo-radio" class="category" id="logo"><span>Logo</span></label>
+                                <div class="indicator"></div>
+                            </div>
+                        </div>
+
+                        <div class="works-cards">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="images/works/donut.png" alt="card-image">
+                                </div>
+                                <div class="card-category">
+                                    <p>UX/UI</p>
+                                </div>
+                                <div class="card-title">
+                                    <h4>T-shirt Design</h4>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="images/works/coffe.png" alt="card-image">
+                                </div>
+                                <div class="card-category">
+                                    <p>UX/UI</p>
+                                </div>
+                                <div class="card-title">
+                                    <h4>Coffe Shop Mockup</h4>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="images/works/winter-cabin-bg.png" alt="card-image">
+                                </div>
+                                <div class="card-category">
+                                    <p>UX/UI</p>
+                                </div>
+                                <div class="card-title">
+                                    <h4>Travel Website</h4>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="images/works/smartphone.png" alt="card-image">
+                                </div>
+                                <div class="card-category">
+                                    <p>UX/UI</p>
+                                </div>
+                                <div class="card-title">
+                                    <h4>App Design</h4>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
             <div class="blogs text" id="blogs-content">
                 <div class="blogs-section">
                     <div class="blogs-title">Blogs</div>
                     <div class="blogs-blocks">
-                        
+                        <div class="blogs-cards">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="images/blogs/blog-template1.jpg" alt="card-image">
+                                </div>
+                                <div class="card-category">
+                                    <p>10 May • Web Design</p>
+                                </div>
+                                <div class="card-title">
+                                    <h4>Programming Blog</h4>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="images/blogs/photography-blog.png" alt="card-image">
+                                </div>
+                                <div class="card-category">
+                                    <p>13 May • Photography</p>
+                                </div>
+                                <div class="card-title">
+                                    <h4>Photography Blog</h4>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
             <div class="contact text" id="contact-content">
                 <div class="contact-section">
                     <div class="contact-title">Contact</div>
                     <div class="contact-blocks">
-                        
+                        <form class="contact-form">
+                            <div class="contact-form-title">
+                                <span>You can message me if you want to discuss about a programming job.</span>
+                            </div>
+                            <div class="contact-form-name">
+                                <label class="input-label name">Name *</label>
+                                <input type="text" class="input-box name">
+                            </div>
+                            <div class="contact-form-email">
+                                <label class="input-label email">Email *</label>
+                                <input type="email" class="input-box email">
+                            </div>
+                            <div class="contact-form-text">
+                                <label class="input-label message">Message *</label>
+                                <textarea name="message" class="input-box message"></textarea>
+                            </div>
+                            <div class="contact-form-btn">
+                                <button type="submit">Send Message</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="sidebar">
-            <input type="radio" name="indicator"  id="about">
-            <input type="radio" name="indicator" checked id="resume">
+            <input type="radio" name="indicator" checked id="about">
+            <input type="radio" name="indicator" id="resume">
             <input type="radio" name="indicator" id="works">
             <input type="radio" name="indicator" id="blogs">
             <input type="radio" name="indicator" id="contact">

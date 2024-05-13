@@ -59,3 +59,49 @@ optionContact.addEventListener('change', () => {
     contactContent.classList.add('active');
   }
 });
+
+const categoryAll = document.querySelector("#all-radio");
+const categoryMockup = document.querySelector("#mockup-radio");
+const categoryGraphic = document.querySelector("#graphic-design-radio");
+const categoryLogo = document.querySelector("#logo-radio");
+
+const allClass = document.querySelector("#all");
+const mockupClass = document.querySelector("#mockup");
+const graphicClass = document.querySelector("#graphic-design");
+const logoClass = document.querySelector("#logo");
+
+categoryAll.addEventListener('change', () => {
+  if (categoryAll.checked) {
+    allClass.classList.add('checked');
+    mockupClass.classList.remove('checked');
+    graphicClass.classList.remove('checked');
+    logoClass.classList.remove('checked');
+  }
+});
+
+categoryMockup.addEventListener('change', () => {
+  if (categoryMockup.checked) {
+    allClass.classList.remove('checked');
+    mockupClass.classList.add('checked');
+    graphicClass.classList.remove('checked');
+    logoClass.classList.remove('checked');
+  }
+});
+
+categoryGraphic.addEventListener('change', () => {
+  if (categoryGraphic.checked) {
+    allClass.classList.remove('checked');
+    mockupClass.classList.remove('checked');
+    graphicClass.classList.add('checked');
+    logoClass.classList.remove('checked');
+  }
+});
+
+categoryLogo.addEventListener('change', () => {
+  if (categoryLogo.checked) {
+    allClass.classList.remove('checked');
+    mockupClass.classList.remove('checked');
+    graphicClass.classList.remove('checked');
+    logoClass.classList.add('checked');
+  }
+});
