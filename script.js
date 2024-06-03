@@ -1,107 +1,46 @@
-const optionAbout = document.getElementById('about');
-const optionResume = document.getElementById('resume');
-const optionWorks = document.getElementById('works');
-const optionBlogs = document.getElementById('blogs');
-const optionContact = document.getElementById('contact');
+const tabs = document.querySelectorAll('.tab_btn');
+const all_content = document.querySelectorAll('.text');
+const radio_btn = document.querySelectorAll('.radio_btn');
 
-const aboutContent = document.getElementById('about-content');
-const resumeContent = document.getElementById('resume-content');
-const worksContent = document.getElementById('works-content');
-const blogsContent = document.getElementById('blogs-content');
-const contactContent = document.getElementById('contact-content');
+radio_btn.forEach((tab, index) => {
+    tab.addEventListener('click', (e) => {
+        tabs.forEach(tab => { tab.checked = false; });
+        tab.checked = true;
 
-optionAbout.addEventListener('change', () => {
-  if (optionAbout.checked) {
-    aboutContent.classList.add('active');
-    resumeContent.classList.remove('active');
-    worksContent.classList.remove('active');
-    blogsContent.classList.remove('active');
-    contactContent.classList.remove('active');
-  }
+        all_content.forEach(content => { content.classList.remove('active'); });
+        all_content[index].classList.add('active');
+    });
 });
 
-optionResume.addEventListener('change', () => {
-  if (optionResume.checked) {
-    aboutContent.classList.remove('active');
-    resumeContent.classList.add('active');
-    worksContent.classList.remove('active');
-    blogsContent.classList.remove('active');
-    contactContent.classList.remove('active');
-  }
-});
+const categorys = document.querySelectorAll('.category');
+const category_radio = document.querySelectorAll('.category_radio');
+const category_content = document.querySelectorAll('.card');
 
-optionWorks.addEventListener('change', () => {
-  if (optionWorks.checked) {
-    aboutContent.classList.remove('active');
-    resumeContent.classList.remove('active');
-    worksContent.classList.add('active');
-    blogsContent.classList.remove('active');
-    contactContent.classList.remove('active');
-  }
-});
 
-optionBlogs.addEventListener('change', () => {
-  if (optionBlogs.checked) {
-    aboutContent.classList.remove('active');
-    resumeContent.classList.remove('active');
-    worksContent.classList.remove('active');
-    blogsContent.classList.add('active');
-    contactContent.classList.remove('active');
-  }
-});
+category_radio.forEach((category, index) => {
+  category.addEventListener('click', (e) => {
+      category_radio.forEach(content => { content.checked = false; });
+      category_radio[index].checked = true;
 
-optionContact.addEventListener('change', () => {
-  if (optionContact.checked) {
-    aboutContent.classList.remove('active');
-    resumeContent.classList.remove('active');
-    worksContent.classList.remove('active');
-    blogsContent.classList.remove('active');
-    contactContent.classList.add('active');
-  }
-});
-
-const categoryAll = document.querySelector("#all-radio");
-const categoryMockup = document.querySelector("#mockup-radio");
-const categoryGraphic = document.querySelector("#graphic-design-radio");
-const categoryLogo = document.querySelector("#logo-radio");
-
-const allClass = document.querySelector("#all");
-const mockupClass = document.querySelector("#mockup");
-const graphicClass = document.querySelector("#graphic-design");
-const logoClass = document.querySelector("#logo");
-
-categoryAll.addEventListener('change', () => {
-  if (categoryAll.checked) {
-    allClass.classList.add('checked');
-    mockupClass.classList.remove('checked');
-    graphicClass.classList.remove('checked');
-    logoClass.classList.remove('checked');
-  }
-});
-
-categoryMockup.addEventListener('change', () => {
-  if (categoryMockup.checked) {
-    allClass.classList.remove('checked');
-    mockupClass.classList.add('checked');
-    graphicClass.classList.remove('checked');
-    logoClass.classList.remove('checked');
-  }
-});
-
-categoryGraphic.addEventListener('change', () => {
-  if (categoryGraphic.checked) {
-    allClass.classList.remove('checked');
-    mockupClass.classList.remove('checked');
-    graphicClass.classList.add('checked');
-    logoClass.classList.remove('checked');
-  }
-});
-
-categoryLogo.addEventListener('change', () => {
-  if (categoryLogo.checked) {
-    allClass.classList.remove('checked');
-    mockupClass.classList.remove('checked');
-    graphicClass.classList.remove('checked');
-    logoClass.classList.add('checked');
-  }
+      categorys.forEach(content => { content.classList.remove('checked'); });
+      categorys[index].classList.add('checked');
+      
+      if (categorys[index].id === 'all') {
+        category_content.forEach(content => {
+          content.classList.add('active');
+        });
+      } else {
+        category_content.forEach(content => {
+          content.classList.remove('active');
+        });
+        const id = categorys[index].id;
+        
+        category_content.forEach(content => {
+          if (content.classList.contains(categorys[index].id)) {
+            content.classList.add('active')
+          }
+        });
+      }
+      
+  });
 });
